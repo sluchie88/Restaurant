@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang=en>
+<!--
+Created by Thomas Sluciak
+Created on 9/27/2019
+Most recent revision:
+1.0.0 Initial creation according to wire frame Software Guild
+-->
+<head>
+	<title>Contact Us</title>
+</head>
+
+<header>Tom's Bar and Grill</header>
+
+<hr />
+<nav>
+<!--
+Navigation menu
+Home     Menu     Contact Us
+-->
+	<p><a href="index.html">Home</a></p>
+	<p><a href="menu.html">Menu</a></p>
+	<p><a href="contact.html">Contact Us</a></p>
+</nav>
+<hr />
+
+<body>
+	<form action="submit.html" method="POST">
+		<label for="name">Name:</label>
+		<input type="text" id="firstName" name="firstName" required />
+		<br />
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" required />
+		<br />
+		<label for="phone">Phone:</label>
+		<input type="text" id="phone" name="phone" required />
+		<br />
+		
+		<label for="reason">Reason for Inquiry:</label>
+		<select id="reason" name="reason" required>
+			<option value="default">Catering</option>
+			<option value="privateParty">Private Party</option>
+			<option value="feedback">Feedback</option>
+			<option value="other">Other</option>
+		</select>
+		<br />
+		
+		<label for="info">Additional Information:</label>
+		<textarea id="info" name="info" rows="5" cols="20"></textarea>
+		
+		<br />
+		<legend>Have you been to the restaurant?</legend>
+		<input type="radio" id="choice1" name="previousCustomer" value="no" checked>
+		<label for="choice1">No</label>
+		<input type="radio" id="choice2" name="previousCustomer" value="yes">
+		<label for="choice2">Yes</label>
+		<br />
+		
+		<label for="bestDays">Best days to contact you:</label>
+		<input type="checkbox" id="M" name="bestDays" value="M" />
+		<label for="M">M</label>
+		<input type="checkbox" id="T" name="bestDays" value="T" />
+		<label for="T">T</label>
+		<input type="checkbox" id="W" name="bestDays" value="W" />
+		<label for="W">W</label>
+		<input type="checkbox" id="Th" name="bestDays" value="Th" />
+		<label for="Th">Th</label>
+		<input type="checkbox" id="F" name="bestDays" value="F" />
+		<label for="F">F</label>
+		<br />		
+		
+		<input type="submit" name="submit" value="Send Request">
+	</form>
+</body>
+
+<footer>
+	<hr />
+	<p>289 Baltimore St SE</p>
+	<p>Milwaukee, WI 53205</p>
+	<p>Tel: (414)623-5656</p>
+	<p>&copy Tom's Bar and Grill 2019. All rights reserved.</p>
+</footer>
