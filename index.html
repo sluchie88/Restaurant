@@ -3,6 +3,9 @@
 Created by Thomas Sluciak
 Created on 9/27/2019
 Most recent revision:
+3.0.2 10/6 Came back and found article and carousel out of alignment. Fixed by adding case for col-xs and col-sm-4
+				Home button no longer changing color after visiting. Tried some fixes but not sure why. Try again later
+						CSS is correct after checking. Maybe there's a problem with the links or scripts?
 3.0.1 10/5 (later) Fixed issue with aligning article about restaurant
 						Fixed issues with carousel. Hadn't properly linked to external JS files
 						Resized Carousel so it wasn't so massive
@@ -78,6 +81,8 @@ Notes:
 			padding-right: 10px;
 			font-size: auto;
 			overflow-wrap: normal;
+			display: table;
+			text-align: left;
 		}
 		<!--Aligns carousel content-->
 		.carouselContent {
@@ -88,6 +93,10 @@ Notes:
 			padding-left: 20px;
 			text-align: center;
 			vertical-align: middle;
+		}
+		#newsCarousel {
+			display: table;
+			text-align: center;
 		}
 		
 	</style>
@@ -136,7 +145,7 @@ https://imgbin.com/png/LezT2Lsp
 	
 	<article id="aboutRestaurant">
 	<h5 class="font-size:1.2em" style="text-align:center" id="aboutRestaurant">About our Nook</h5>
-	<div class="col-sm-4 offset-4">
+	<div class="col-xs-3 offset-3; col-sm-4 offset-4">
 		<p id="aboutRestaurant">Tom's Nook was founded in July of 2019. While we are still new,
 		we are fast becoming a neighborhood staple for our small menu but expertly crafted food,
 		our warm and cozy atmosphere, and our frequent events. We host all kinds of events, from bar trivia every Tuesday and Thursday nights
@@ -152,7 +161,7 @@ https://imgbin.com/png/LezT2Lsp
 <!--Carousel of news for the restaurant-->
 <!-- Broken, needs to be fixed
 		Issues: not sliding. Displaying all text at once, not on separate slides-->
-<div id="newsCarousel" class="carousel slide col-sm-4 offset-4" data-ride="carousel">
+<div id="newsCarousel" class="carousel slide col-xs-4 offset-3" data-ride="carousel">
 		<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img class="d-block w-100" src="images/slide1.png" alt="We're opening a new location.">

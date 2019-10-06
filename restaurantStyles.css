@@ -56,7 +56,7 @@ nav {
 
 
 /* nav block styling*/
-nav a {
+nav a, #notIcon, #homeIcon {
 	background-color: #0b0c10;
 	color: #66fcf1;
 	padding: 8px;
@@ -69,7 +69,7 @@ nav a {
 	float: left;
 }
 
-nav a:hover {
+nav a, #notIcon, #homeIcon:hover {
 	font-weight: bold;
 	text-decoration: none;
 	color: #66fcf1;
