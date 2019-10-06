@@ -1,0 +1,105 @@
+/*
+Created by Thomas Sluciak
+Created on 9/30/19
+Date last modified:
+9/30/19 initial creation
+
+
+Notes:
+	Add styles for background -> one that isn't ugly
+	Give menu a background other than white
+	Make sure menu item names are larger than descr
+	Add beverage list
+	
+*/
+
+/*Link to open sans font used in body and footer*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/*Link to Oleo script used in header*/
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap');
+
+
+header, footer {
+	background-color: #0b0c10;
+	text-align: center;
+	padding: 30px 10px 20px 10px;
+	margin: 0 auto;
+	color: #66fcf1;
+	font-family: 'Oleo Script', cursive;
+}
+
+footer {
+	top-border: 5px dotted #45a29e;
+}
+
+#topJumbo {
+	margin-bottom: 2px;
+}
+
+/*helps to align logo and nav buttons */
+.clear-float {
+	clear:both;
+}
+
+body{
+	background-color: #1f2833;
+	color: #66fcf1;
+	font-family: 'Open Sans', sans-serif,
+}
+
+nav {
+	border-top: 5px dotted #45a29e;
+	border-bottom: 5px dotted #45a29e;
+	margin-bottom: 4px;
+}
+
+
+/* nav block styling*/
+nav a {
+	background-color: #0b0c10;
+	color: #66fcf1;
+	padding: 8px;
+	border: thin solid #66fcf1;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	margin: 20px;
+	width: 100px;
+	float: left;
+}
+
+nav a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: #66fcf1;
+}
+
+/*underlines text on click*/
+nav a:active {
+	text-decoration: underline;
+}
+
+#notIcon:active{
+	text-decoration: underline;
+}
+
+/*inverts colors after visitng*/	
+nav a, #notIcon, #homeIcon:visited {
+	background-color: #c5c6c7;
+	color: #0b0c10;
+	border-color: #66fcf1;
+}
+
+#homeIcon:active{
+	text-decoration: underline;
+}
+
+/*Styling for carousel items*/
+.carousel-item:active {
+	display: block;
+}
+
+h3 {
+	text-align: center;
+}

@@ -3,49 +3,183 @@
 Created by Thomas Sluciak
 Created on 9/27/2019
 Most recent revision:
+3.0.1 10/5 (later) Fixed issue with aligning article about restaurant
+						Fixed issues with carousel. Hadn't properly linked to external JS files
+						Resized Carousel so it wasn't so massive
+						Seems like some of the links are extra and not needed
+3.0.0 10/5 Aligned text. Added new logo. Changed styling. Fixed issues with buttons (hovering, active)
+				Added home icon. Added bootstrap grid functionality. Attempted to add carousel but broken (not sliding)
+2.0.0 changed styling. revamped color scheme. still need to make a new logo
+1.1.1 on 10/2 edited background colors, removed background image
+1.1.0 on 9/30/19 Added CSS stylesheet
 1.0.0 Created according to assignment wireframe on Software Guild
+
+
+Notes:
+	Things to add:
+		Style restaurant name with hosted or imbedded font
+		Change background color of page
+
+
 -->
-<html lang=en>
+<html lang="en">
 
 <head>
-	<title>Home Page</title>
-</head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		 <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-<header>Tom's Bar and Grill</header>
-<hr />
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+		
+		<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+		crossorigin="anonymous">
+		
+		<!--link to bootstrap-->
+		<link href="css/bootstrap.min.css" 
+				rel="stylesheet" 
+				type="text/css" />
+		
+		<!--link to icon library-->
+		<link rel="stylesheet" 
+				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!--Link to external CSS file -->
+		<link href="restaurantStyles.css"
+				rel="stylesheet"
+				type="text/css" />
+		
+		
+	
+	<title>Home Page</title>
+	
+	<style>
+		<!--Used to center the logo on the page -->
+		#logo {
+			text-align: center;
+			padding-bottom: 8px;
+		}
+		<!--For aligning and styling the information about the restaurant-->
+		#aboutRestaurant {
+			margin-left: auto;
+			margin-right: auto;
+			padding-right: 10px;
+			font-size: auto;
+			overflow-wrap: normal;
+		}
+		<!--Aligns carousel content-->
+		.carouselContent {
+			display: table;
+			text-align: center;
+		}
+		.carousel-item h4 {
+			padding-left: 20px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		
+	</style>
+	
+	
+</head>
+	<div class="jumbotron jumbotron-fluid" id="topJumbo"
+	style="background-color:#0b0c10;">
+	<header>
+		<h1 style="font-size:3em">Tom's Nook</h1>
+		<h4 class="font-italic font-size:1.2em">New location coming soon!</h4>
+	</header>
+	</div>
+
 <nav>
 <!--
 Navigation menu
 Home     Menu     Contact Us
 -->
-	<p><a href="index.html">Home</a></p>
-	<p><a href="menu.html">Menu</a></p>
-	<p><a href="contact.html">Contact Us</a></p>
+	<a class="btn badge-pill" href="index.html" id="homeIcon"><i class="fa fa-home"></i></a>
+	<!--After adding home icon, all links stopped being underlined when active.
+		  Searched online but couldn't figure out how to get the home icon to be underlined.
+		  Added separate ID so other links would still underline on click-->
+	<a class="btn badge-pill" href="menu.html" id="notIcon">Menu</a>
+	<a class="btn badge-pill" href="contact.html" id="notIcon">Contact Us</a>
+	<div class="clear-float"></div>
+
 </nav>
-<hr />
-<img src="images/logo.png" alt="Tom's Bar and Grill" class="center"; style="border: thin black solid"; />
+
+
+
+<!-- Container class for logo 
+Cat image found on imgbin.com, artist gave permission to use for free
+https://imgbin.com/png/LezT2Lsp
+-->
+<div class="test-center">
+	<img src="images/logo.png" alt="Tom's Nook" class="rounded mx-auto d-block img-fluid" id="logo"; style="float-left"; />
+	<div class="clear-float"></div>
+</div>
+
+<br />
 
 <body>
 	
-	<article>
-		<p>Restaurant Description</p>
-		<p>Tom's Restaurant was founded in July of 2019. While we are still new,
-		we are fast becoming a neighborhood staple for our wide selection of foreign 
-		and domestic beers (try the nitro stouts, they're Tom's favorite), our unmatched
-		pub food, and our frequent events. We have bar trivia every Tuesday and Thursday night,
-		hosted by Matt's Trivia. The winning team gets 100 bar dollars and their picture
-		on our Facebook page.	So come on down and enjoy a frosty pint, bring some friends for bar trivia, and stick around and chat with
+	<noscript><h3>Please enable JavaScript to enjoy the full functionality of this website.</h3></noscript>
+	
+	<article id="aboutRestaurant">
+	<h5 class="font-size:1.2em" style="text-align:center" id="aboutRestaurant">About our Nook</h5>
+	<div class="col-sm-4 offset-4">
+		<p id="aboutRestaurant">Tom's Nook was founded in July of 2019. While we are still new,
+		we are fast becoming a neighborhood staple for our small menu but expertly crafted food,
+		our warm and cozy atmosphere, and our frequent events. We host all kinds of events, from bar trivia every Tuesday and Thursday nights
+		(hosted by Matt's Trivia), to our monthly book club, and everything in between. 
+		Our goal is to make our neighborhood a better place, and make some good food while we're at it.	
+		So come on down and enjoy a frosty pint, bring some friends, and stick around and chat with
 		our friendly staff and patrons. We gurantee you won't be disappointed.</p>
-		
+	</div>
+	<div class="clear-float"></div>
 		
 	</article>	
+
+<!--Carousel of news for the restaurant-->
+<!-- Broken, needs to be fixed
+		Issues: not sliding. Displaying all text at once, not on separate slides-->
+<div id="newsCarousel" class="carousel slide col-sm-4 offset-4" data-ride="carousel">
+		<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="images/slide1.png" alt="We're opening a new location.">
+				</div>
+			<div class="carousel-item">
+				<img class="d-block w-100" src="images/slide2.png" alt="We're rolling out our seasonal menu, with special options for this season.">
+			</div>
+			<div class="carousel-item">
+				<img class="d-block w-100" src="images/slide3.png" alt="The Drink of the Month is SG Special Brew.">
+			</div>
+		</div>
+	<a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+
+
+
 
 </body>
 
 <footer>
-	<hr />
 	<p>289 Baltimore St SE</p>
 	<p>Milwaukee, WI 53205</p>
 	<p>Tel: (414)623-5656</p>
-	<p>&copy Tom's Bar and Grill 2019. All rights reserved.</p>
+	<p>&copy Tom's Nook 2019. All rights reserved.</p>
 </footer>

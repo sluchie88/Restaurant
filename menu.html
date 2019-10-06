@@ -1,96 +1,170 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 <!--
 Created by Thomas Sluciak
 Created on 9/27/2019
 Most recent revision:
+2.0.2 Minor tweaks to CSS and bootstrap functionality
+2.0.1 Added beverages table
+2.0.0 Changed from HTML tables to Bootstrap formatting (10/1)
+1.1.0 on 9/30/19 Added CSS stylesheet
 1.0.0 Initial creation according to wire frame Software Guild
 -->
 <head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+		crossorigin="anonymous">
+		
+		<!--link to icon library-->
+		<link rel="stylesheet" 
+				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				
+		<!--link to CSS stylesheet-->
+		<link href="restaurantStyles.css"
+				rel="stylesheet"
+				type="text/css" />
+				
 	<title>Menu</title>
+	
+	<style>
+		body{
+			font-size: 1em;
+		}
+		.itemName{
+			font-size: 1.2em;
+		}
+		tr:nth-child(even){
+			background-color: #0b0c10;
+		}
+		th, td{
+			border-collapse: collapse;
+		}
+	</style>
+	
 </head>
 
-<header>Tom's Bar and Grill</header>
+	<div class="jumbotron jumbotron-fluid" id="topJumbo"
+	style="background-color:#0b0c10">
+	<header>
+		<h1>Tom's Nook</h1>
+	</header>
+	</div>
 
-<hr />
+
 <nav>
 <!--
 Navigation menu
 Home     Menu     Contact Us
 -->
-	<p><a href="index.html">Home</a></p>
-	<p><a href="menu.html">Menu</a></p>
-	<p><a href="contact.html">Contact Us</a></p>
+	<a class="btn badge-pill" href="index.html" id="homeIcon"><i class="fa fa-home"></i></a>
+	<!--After adding home icon, all links stopped being underlined when active.
+		  Searched online but couldn't figure out how to get the home icon to be underlined.
+		  Added separate ID so other links would still underline on click-->
+	<a class="btn badge-pill" href="menu.html" id="notIcon">Menu</a>
+	<a class="btn badge-pill" href="contact.html" id="notIcon">Contact Us</a>
+	<div class="clear-float"></div>
 </nav>
-<hr />
+
 
 <body>
-	<table border="0" width="50%";>
-		<tr>
-			<th>Burgers and Fries</th>
-			<th>Hot Dog and Chips</th>
-			<th>Italian Sausage and Peppers</th>
-		</tr>
-		<tr>
-			<td>An American Classic!<br />
-					Your choice - with our without cheese<br />
-					Pickle, onion, tomato, and lettuce<br />
-					Served with our famous thick cut french fries<br />
-					$7.96
-			</td>
-			<td>
+	
+	<noscript><h3>Please enable JavaScript to enjoy the full functionality of this website.</h3></noscript>
+
+	<div class="center-content">
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-3">
+				<b class="itemName">Burgers and Fries</b><br />
+				An American Classic!<br />
+				Your choice - with our without cheese<br />
+				Pickle, onion, tomato, and lettuce<br />
+				Served with our famous thick cut french fries<br />
+				$7.96
+			</div>
+			<div class="col-sm-3">
+				<b class="itemName">Hot Dog and Chips</b><br />
 				A Summer Classic!<br />
 				Your choice - white or wheat bun<br />
 				Relish, mustard, and ketchup<br />
 				Served with our house-made chips<br />
 				$7.95
-			</td>
-			<td>
+			</div>
+			<div class="col-sm-3">
+				<b class="itemName">Italian Sausage and Peppers</b><br />
 				An All-Time Favorite!<br />
 				Your choice - mild or spicy Cole Slaw<br />
 				Served with garlic mashers<br />
-				$10.95				
-			</td>
-		</tr>
-		
-		<tr>
-			<th>Tenderloin Sandwich and Chips</th>
-			<th>House Salad</th>
-			<th>Brisket Sandwich and Fries</th>
-		</tr>
-		
-		<tr>
-			<td>
+				$10.95	
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-3">
+				<b class="itemName">Tenderloin Sandwich and Chips</b><br />
 				Really Hits the Spot!<br />
 				Plain or Sesame Seed Bun<br />
 				Pickle, onion, tomato, and lettuce<br />
 				Served with our house-made chips<br />
-				$8.95
-			</td>
-			<td>
+				$8.95 <br />
+			</div>
+			<div class="col-sm-3">
+				<b class="itemName">House Salad</b><br />
 				On the Lighter Side<br />
 				Your choice - with or without cheese<br />
 				Iceburg lettuce, tomatoes, peppers<br />
 				Thousand Island or Ranch Dressing<br />
 				Served with a dinner roll<br />
-				$6.95
-			</td>
-			<td>
+				$6.95 <br />
+			</div>
+			<div class="col-sm-3">
+				<b class="itemName">Brisket Sandwich and Fries</b><br />
 				A Taste of Texas!<br />
 				Smoked Brisket on thick-cut Texas Toast<br />
 				Cole Slaw<br />
 				Served with our famous thick-cut french fries<br />
-				$7.95
-			</td>
-		</tr>
+				$7.95 <br />
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+	<div class="clear-float"></div>
+<br />
+<br />
+	<table class="table" id="beverages">
+			<tr>
+				<th>Beverages</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>Root Beer</td>
+				<td>$3.00</td>
+			</tr>
+			<tr>
+				<td>Bottled Water</td>
+				<td>$1.25</td>
+			</tr>
+			<tr>
+				<td>Lemonade</td>
+				<td>$1.00</td>
+			</tr>
+			<tr>
+				<td>Iced Tea</td>
+				<td>$1.25</td>
+			</tr>
+			
 	</table>
 </body>
 
 
 <footer>
-	<hr />
 	<p>289 Baltimore St SE</p>
 	<p>Milwaukee, WI 53205</p>
 	<p>Tel: (414)623-5656</p>
-	<p>&copy Tom's Bar and Grill 2019. All rights reserved.</p>
+	<p>&copy Tom's Nook 2019. All rights reserved.</p>
 </footer>
